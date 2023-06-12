@@ -1,0 +1,611 @@
+[debug] [2023-06-12T01:32:52.974Z] ----------------------------------------------------------------------
+[debug] [2023-06-12T01:32:52.977Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Tomás\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-06-12T01:32:52.978Z] CLI Version:   12.3.1
+[debug] [2023-06-12T01:32:52.978Z] Platform:      win32
+[debug] [2023-06-12T01:32:52.979Z] Node Version:  v18.14.2
+[debug] [2023-06-12T01:32:52.980Z] Time:          Sun Jun 11 2023 18:32:52 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-06-12T01:32:52.980Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-12T01:32:53.075Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-12T01:32:53.075Z] > authorizing via signed-in user (tmaldonadotrs@gmail.com)
+[debug] [2023-06-12T01:32:53.076Z] [iam] checking project markets-app-80cf9 for permissions ["cloudconfig.configs.get","cloudconfig.configs.update","cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-06-12T01:32:53.079Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions [none]
+[debug] [2023-06-12T01:32:53.079Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:32:53.079Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions {"permissions":["cloudconfig.configs.get","cloudconfig.configs.update","cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-12T01:32:53.445Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions 200
+[debug] [2023-06-12T01:32:53.446Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions {"permissions":["cloudconfig.configs.get","cloudconfig.configs.update","cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-12T01:32:53.448Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/markets-app-80cf9/serviceAccounts/markets-app-80cf9@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-06-12T01:32:53.448Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/markets-app-80cf9/serviceAccounts/markets-app-80cf9@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-06-12T01:32:53.722Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/markets-app-80cf9/serviceAccounts/markets-app-80cf9@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-06-12T01:32:53.722Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/markets-app-80cf9/serviceAccounts/markets-app-80cf9@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-06-12T01:32:53.728Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 [none]
+[debug] [2023-06-12T01:32:54.004Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 200
+[debug] [2023-06-12T01:32:54.004Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 {"projectId":"markets-app-80cf9","projectNumber":"750801349802","displayName":"Markets App","name":"projects/markets-app-80cf9","resources":{"hostingSite":"markets-app-80cf9"},"state":"ACTIVE","etag":"1_b98090e6-6f20-4800-9b3b-68866915d61e"}
+[info] 
+[info] === Deploying to 'markets-app-80cf9'...
+[info] 
+[info] i  deploying functions, hosting, remoteconfig 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] +  functions: Finished running predeploy script. 
+[debug] [2023-06-12T01:33:01.121Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 [none]
+[debug] [2023-06-12T01:33:01.480Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 200
+[debug] [2023-06-12T01:33:01.481Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 {"projectId":"markets-app-80cf9","projectNumber":"750801349802","displayName":"Markets App","name":"projects/markets-app-80cf9","resources":{"hostingSite":"markets-app-80cf9"},"state":"ACTIVE","etag":"1_b98090e6-6f20-4800-9b3b-68866915d61e"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-06-12T01:33:01.500Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-06-12T01:33:01.500Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:33:01.506Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-06-12T01:33:01.507Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:33:01.513Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudbuild.googleapis.com [none]
+[debug] [2023-06-12T01:33:01.513Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudbuild.googleapis.com x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:33:01.518Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/artifactregistry.googleapis.com [none]
+[debug] [2023-06-12T01:33:01.518Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/artifactregistry.googleapis.com x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:33:01.968Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudfunctions.googleapis.com 200
+[debug] [2023-06-12T01:33:01.969Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-06-12T01:33:01.975Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/runtimeconfig.googleapis.com 200
+[debug] [2023-06-12T01:33:01.976Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-06-12T01:33:01.979Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/artifactregistry.googleapis.com 200
+[debug] [2023-06-12T01:33:01.979Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-06-12T01:33:02.007Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudbuild.googleapis.com 200
+[debug] [2023-06-12T01:33:02.008Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-06-12T01:33:02.012Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9/adminSdkConfig [none]
+[debug] [2023-06-12T01:33:02.409Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9/adminSdkConfig 200
+[debug] [2023-06-12T01:33:02.409Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9/adminSdkConfig {"projectId":"markets-app-80cf9","storageBucket":"markets-app-80cf9.appspot.com"}
+[debug] [2023-06-12T01:33:02.411Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/markets-app-80cf9/configs [none]
+[debug] [2023-06-12T01:33:02.612Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/markets-app-80cf9/configs 200
+[debug] [2023-06-12T01:33:02.613Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/markets-app-80cf9/configs {}
+[debug] [2023-06-12T01:33:02.619Z] Validating nodejs source
+[debug] [2023-06-12T01:33:05.982Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-06-12T01:33:05.982Z] Building nodejs source
+[debug] [2023-06-12T01:33:05.984Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-06-12T01:33:06.007Z] Found firebase-functions binary at 'C:\Users\Tomás\Desktop\repository-windows\markets-app\markets-app\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-06-12T01:33:06.422Z] Serving at port 8816
+
+[debug] [2023-06-12T01:33:07.154Z] FetchError: request to http://localhost:8816/__/quitquitquit failed, reason: connect ECONNREFUSED ::1:8816
+    at ClientRequest.<anonymous> (C:\Users\Tomás\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:513:28)
+    at ClientRequest.emit (node:domain:489:12)
+    at Socket.socketErrorListener (node:_http_client:502:9)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-06-12T01:34:32.911Z] ----------------------------------------------------------------------
+[debug] [2023-06-12T01:34:32.914Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Tomás\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-06-12T01:34:32.915Z] CLI Version:   12.3.1
+[debug] [2023-06-12T01:34:32.915Z] Platform:      win32
+[debug] [2023-06-12T01:34:32.915Z] Node Version:  v18.14.2
+[debug] [2023-06-12T01:34:32.916Z] Time:          Sun Jun 11 2023 18:34:32 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-06-12T01:34:32.917Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-12T01:34:33.015Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-12T01:34:33.016Z] > authorizing via signed-in user (tmaldonadotrs@gmail.com)
+[debug] [2023-06-12T01:34:33.016Z] [iam] checking project markets-app-80cf9 for permissions ["cloudconfig.configs.get","cloudconfig.configs.update","cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-06-12T01:34:33.020Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions [none]
+[debug] [2023-06-12T01:34:33.020Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:34:33.020Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions {"permissions":["cloudconfig.configs.get","cloudconfig.configs.update","cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-12T01:34:33.446Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions 200
+[debug] [2023-06-12T01:34:33.446Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions {"permissions":["cloudconfig.configs.get","cloudconfig.configs.update","cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-12T01:34:33.447Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/markets-app-80cf9/serviceAccounts/markets-app-80cf9@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-06-12T01:34:33.448Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/markets-app-80cf9/serviceAccounts/markets-app-80cf9@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-06-12T01:34:33.799Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/markets-app-80cf9/serviceAccounts/markets-app-80cf9@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-06-12T01:34:33.799Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/markets-app-80cf9/serviceAccounts/markets-app-80cf9@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-06-12T01:34:33.801Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 [none]
+[debug] [2023-06-12T01:34:34.254Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 200
+[debug] [2023-06-12T01:34:34.255Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 {"projectId":"markets-app-80cf9","projectNumber":"750801349802","displayName":"Markets App","name":"projects/markets-app-80cf9","resources":{"hostingSite":"markets-app-80cf9"},"state":"ACTIVE","etag":"1_b98090e6-6f20-4800-9b3b-68866915d61e"}
+[info] 
+[info] === Deploying to 'markets-app-80cf9'...
+[info] 
+[info] i  deploying functions, hosting, remoteconfig 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] +  functions: Finished running predeploy script. 
+[debug] [2023-06-12T01:34:41.630Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 [none]
+[debug] [2023-06-12T01:34:41.967Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 200
+[debug] [2023-06-12T01:34:41.967Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 {"projectId":"markets-app-80cf9","projectNumber":"750801349802","displayName":"Markets App","name":"projects/markets-app-80cf9","resources":{"hostingSite":"markets-app-80cf9"},"state":"ACTIVE","etag":"1_b98090e6-6f20-4800-9b3b-68866915d61e"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-06-12T01:34:41.974Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-06-12T01:34:41.974Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:34:41.976Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-06-12T01:34:41.976Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:34:41.978Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudbuild.googleapis.com [none]
+[debug] [2023-06-12T01:34:41.978Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudbuild.googleapis.com x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:34:41.981Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/artifactregistry.googleapis.com [none]
+[debug] [2023-06-12T01:34:41.981Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/artifactregistry.googleapis.com x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:34:42.284Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudfunctions.googleapis.com 200
+[debug] [2023-06-12T01:34:42.285Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-06-12T01:34:42.556Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/artifactregistry.googleapis.com 200
+[debug] [2023-06-12T01:34:42.557Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-06-12T01:34:42.567Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudbuild.googleapis.com 200
+[debug] [2023-06-12T01:34:42.568Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-06-12T01:34:42.571Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/runtimeconfig.googleapis.com 200
+[debug] [2023-06-12T01:34:42.572Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-06-12T01:34:42.574Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9/adminSdkConfig [none]
+[debug] [2023-06-12T01:34:42.830Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9/adminSdkConfig 200
+[debug] [2023-06-12T01:34:42.831Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9/adminSdkConfig {"projectId":"markets-app-80cf9","storageBucket":"markets-app-80cf9.appspot.com"}
+[debug] [2023-06-12T01:34:42.833Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/markets-app-80cf9/configs [none]
+[debug] [2023-06-12T01:34:43.068Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/markets-app-80cf9/configs 200
+[debug] [2023-06-12T01:34:43.069Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/markets-app-80cf9/configs {}
+[debug] [2023-06-12T01:34:43.072Z] Validating nodejs source
+[debug] [2023-06-12T01:34:46.085Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-06-12T01:34:46.086Z] Building nodejs source
+[debug] [2023-06-12T01:34:46.087Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-06-12T01:34:46.108Z] Found firebase-functions binary at 'C:\Users\Tomás\Desktop\repository-windows\markets-app\markets-app\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-06-12T01:34:46.513Z] Serving at port 8986
+
+[debug] [2023-06-12T01:34:46.991Z] Server is running on port 3001
+
+[debug] [2023-06-12T01:34:46.997Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-06-12T01:34:47.007Z] shutdown requested via /__/quitquitquit
+
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged C:\Users\Tomás\Desktop\repository-windows\markets-app\markets-app\functions (71.71 KB) for uploading 
+[debug] [2023-06-12T01:34:57.137Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/markets-app-80cf9/locations/-/functions [none]
+[debug] [2023-06-12T01:34:57.647Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/markets-app-80cf9/locations/-/functions 200
+[debug] [2023-06-12T01:34:57.648Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/markets-app-80cf9/locations/-/functions {}
+[debug] [2023-06-12T01:34:57.651Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/markets-app-80cf9/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-06-12T01:34:58.340Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/markets-app-80cf9/locations/-/functions 200
+[debug] [2023-06-12T01:34:58.341Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/markets-app-80cf9/locations/-/functions {}
+[debug] [2023-06-12T01:34:58.360Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 [none]
+[debug] [2023-06-12T01:34:58.642Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 200
+[debug] [2023-06-12T01:34:58.642Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 {"projectId":"markets-app-80cf9","projectNumber":"750801349802","displayName":"Markets App","name":"projects/markets-app-80cf9","resources":{"hostingSite":"markets-app-80cf9"},"state":"ACTIVE","etag":"1_b98090e6-6f20-4800-9b3b-68866915d61e"}
+[debug] [2023-06-12T01:34:58.649Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/markets-app-80cf9/versions [none]
+[debug] [2023-06-12T01:34:58.650Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/markets-app-80cf9/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-06-12T01:34:59.551Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/markets-app-80cf9/versions 200
+[debug] [2023-06-12T01:34:59.551Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/markets-app-80cf9/versions {"name":"projects/750801349802/sites/markets-app-80cf9/versions/e0d53aa447268fe6","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-06-12T01:34:59.553Z] >>> [apiv2][query] GET https://firebaseremoteconfig.googleapis.com/v1/projects/750801349802/remoteConfig 
+[debug] [2023-06-12T01:34:59.831Z] <<< [apiv2][status] GET https://firebaseremoteconfig.googleapis.com/v1/projects/750801349802/remoteConfig 200
+[debug] [2023-06-12T01:34:59.831Z] <<< [apiv2][body] GET https://firebaseremoteconfig.googleapis.com/v1/projects/750801349802/remoteConfig {}
+[debug] [2023-06-12T01:34:59.833Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2023-06-12T01:34:59.834Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions [none]
+[debug] [2023-06-12T01:34:59.834Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:34:59.834Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-06-12T01:35:00.101Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions 200
+[debug] [2023-06-12T01:35:00.101Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-06-12T01:35:00.102Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2023-06-12T01:35:00.104Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/markets-app-80cf9/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2023-06-12T01:35:00.105Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/markets-app-80cf9/locations/us-central1/functions:generateUploadUrl {}
+[debug] [2023-06-12T01:35:07.773Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/markets-app-80cf9/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2023-06-12T01:35:07.773Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/markets-app-80cf9/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/uploads-3343064326.us-central1.cloudfunctions.appspot.com/f62da2e4-8a18-40b9-8d8a-641c51f32733.zip?GoogleAccessId=service-750801349802@gcf-admin-robot.iam.gserviceaccount.com&Expires=1686535507&Signature=hX3yC1v7a7c5i3lgz1DOtwKOAfWv55TVAXonwcUGfbxxIwumIWlJPm4sPNTUUrjvtXR48ZX1SqiRwMf5SVftaI9XjLxGp8K0DELLMDua5S%2BDZXjsfXXJv%2FOxasmnKfXKxyHNWMspgVQe66MQ5MXoPZx7r13w%2FdGeJzbcLl4c6dyk8LG2LImsRWWZa1Yb8Um6MVv3HMFcAI1DDqsS%2FUaqumWBtU3JUdOpExPONZOspJNFJX2CV1W5BM6ab6TZ6uV7wSiOU3AH69gyy8Oro7%2FVTdyWDUXVtOXoJjGZtp0qjjtsRLNTj1C5CdZjg5gbTuAl1iJDXOEjsfkPjOkXvByaSw%3D%3D"}
+[debug] [2023-06-12T01:35:07.776Z] >>> [apiv2][query] PUT https://storage.googleapis.com/uploads-3343064326.us-central1.cloudfunctions.appspot.com/f62da2e4-8a18-40b9-8d8a-641c51f32733.zip GoogleAccessId=service-750801349802%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1686535507&Signature=hX3yC1v7a7c5i3lgz1DOtwKOAfWv55TVAXonwcUGfbxxIwumIWlJPm4sPNTUUrjvtXR48ZX1SqiRwMf5SVftaI9XjLxGp8K0DELLMDua5S%2BDZXjsfXXJv%2FOxasmnKfXKxyHNWMspgVQe66MQ5MXoPZx7r13w%2FdGeJzbcLl4c6dyk8LG2LImsRWWZa1Yb8Um6MVv3HMFcAI1DDqsS%2FUaqumWBtU3JUdOpExPONZOspJNFJX2CV1W5BM6ab6TZ6uV7wSiOU3AH69gyy8Oro7%2FVTdyWDUXVtOXoJjGZtp0qjjtsRLNTj1C5CdZjg5gbTuAl1iJDXOEjsfkPjOkXvByaSw%3D%3D
+[debug] [2023-06-12T01:35:07.777Z] >>> [apiv2][body] PUT https://storage.googleapis.com/uploads-3343064326.us-central1.cloudfunctions.appspot.com/f62da2e4-8a18-40b9-8d8a-641c51f32733.zip [stream]
+[debug] [2023-06-12T01:35:08.149Z] <<< [apiv2][status] PUT https://storage.googleapis.com/uploads-3343064326.us-central1.cloudfunctions.appspot.com/f62da2e4-8a18-40b9-8d8a-641c51f32733.zip 200
+[debug] [2023-06-12T01:35:08.149Z] <<< [apiv2][body] PUT https://storage.googleapis.com/uploads-3343064326.us-central1.cloudfunctions.appspot.com/f62da2e4-8a18-40b9-8d8a-641c51f32733.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] i  hosting[markets-app-80cf9]: beginning deploy... 
+[info] i  hosting[markets-app-80cf9]: found 1 files in public 
+[debug] [2023-06-12T01:35:08.160Z] [hosting] uploading with 200 concurrency
+[debug] [2023-06-12T01:35:08.162Z] [hosting] hash cache [cHVibGlj] not populated
+[debug] [2023-06-12T01:35:08.181Z] [hosting] hash cache [cHVibGlj] stored for 1 files
+[debug] [2023-06-12T01:35:08.182Z] [hosting][hash queue][FINAL] {"max":10,"min":10,"avg":10,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":16}
+[debug] [2023-06-12T01:35:08.184Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/750801349802/sites/markets-app-80cf9/versions/e0d53aa447268fe6:populateFiles [none]
+[debug] [2023-06-12T01:35:08.184Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/750801349802/sites/markets-app-80cf9/versions/e0d53aa447268fe6:populateFiles {"files":{"/index.html":"80651480aedf4c790a9b6c88ab0158d5c62633b16d288ec4b0d0c7d75e3bb8db"}}
+[debug] [2023-06-12T01:35:08.602Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/750801349802/sites/markets-app-80cf9/versions/e0d53aa447268fe6:populateFiles 200
+[debug] [2023-06-12T01:35:08.603Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/750801349802/sites/markets-app-80cf9/versions/e0d53aa447268fe6:populateFiles {"uploadRequiredHashes":["80651480aedf4c790a9b6c88ab0158d5c62633b16d288ec4b0d0c7d75e3bb8db"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/markets-app-80cf9/versions/e0d53aa447268fe6/files"}
+[debug] [2023-06-12T01:35:08.604Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/markets-app-80cf9/versions/e0d53aa447268fe6/files/80651480aedf4c790a9b6c88ab0158d5c62633b16d288ec4b0d0c7d75e3bb8db [none]
+[debug] [2023-06-12T01:35:08.604Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/markets-app-80cf9/versions/e0d53aa447268fe6/files/80651480aedf4c790a9b6c88ab0158d5c62633b16d288ec4b0d0c7d75e3bb8db [stream]
+[debug] [2023-06-12T01:35:08.606Z] [hosting][populate queue][FINAL] {"max":428,"min":428,"avg":428,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":430}
+[debug] [2023-06-12T01:35:08.606Z] [hosting] uploads queued: 1
+[debug] [2023-06-12T01:35:09.094Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/markets-app-80cf9/versions/e0d53aa447268fe6/files/80651480aedf4c790a9b6c88ab0158d5c62633b16d288ec4b0d0c7d75e3bb8db 200
+[debug] [2023-06-12T01:35:09.095Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/markets-app-80cf9/versions/e0d53aa447268fe6/files/80651480aedf4c790a9b6c88ab0158d5c62633b16d288ec4b0d0c7d75e3bb8db [stream]
+[debug] [2023-06-12T01:35:09.095Z] [hosting][upload queue][FINAL] {"max":492,"min":492,"avg":492,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":492}
+[info] +  hosting[markets-app-80cf9]: file upload complete 
+[debug] [2023-06-12T01:35:09.099Z] [hosting] deploy completed after 945ms
+[info] i  functions: creating Node.js 18 (1st Gen) function app(us-central1)... 
+[debug] [2023-06-12T01:35:09.109Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/markets-app-80cf9/locations/us-central1/functions [none]
+[debug] [2023-06-12T01:35:09.109Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/markets-app-80cf9/locations/us-central1/functions {"name":"projects/markets-app-80cf9/locations/us-central1/functions/app","sourceUploadUrl":"https://storage.googleapis.com/uploads-3343064326.us-central1.cloudfunctions.appspot.com/f62da2e4-8a18-40b9-8d8a-641c51f32733.zip?GoogleAccessId=service-750801349802@gcf-admin-robot.iam.gserviceaccount.com&Expires=1686535507&Signature=hX3yC1v7a7c5i3lgz1DOtwKOAfWv55TVAXonwcUGfbxxIwumIWlJPm4sPNTUUrjvtXR48ZX1SqiRwMf5SVftaI9XjLxGp8K0DELLMDua5S%2BDZXjsfXXJv%2FOxasmnKfXKxyHNWMspgVQe66MQ5MXoPZx7r13w%2FdGeJzbcLl4c6dyk8LG2LImsRWWZa1Yb8Um6MVv3HMFcAI1DDqsS%2FUaqumWBtU3JUdOpExPONZOspJNFJX2CV1W5BM6ab6TZ6uV7wSiOU3AH69gyy8Oro7%2FVTdyWDUXVtOXoJjGZtp0qjjtsRLNTj1C5CdZjg5gbTuAl1iJDXOEjsfkPjOkXvByaSw%3D%3D","entryPoint":"app","runtime":"nodejs18","dockerRegistry":"ARTIFACT_REGISTRY","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3e4f54cf3f0e67c0eb22239bdef93187c048bf02"},"httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"minInstances":null,"maxInstances":null,"ingressSettings":null,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"markets-app-80cf9\",\"storageBucket\":\"markets-app-80cf9.appspot.com\"}","GCLOUD_PROJECT":"markets-app-80cf9","EVENTARC_CLOUD_EVENT_SOURCE":"projects/markets-app-80cf9/locations/us-central1/functions/app"},"serviceAccountEmail":null,"availableMemoryMb":null,"timeout":null,"vpcConnector":null,"vpcConnectorEgressSettings":null,"buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}}
+[debug] [2023-06-12T01:35:09.640Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/markets-app-80cf9/locations/us-central1/functions 200
+[debug] [2023-06-12T01:35:09.640Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/markets-app-80cf9/locations/us-central1/functions {"name":"operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/markets-app-80cf9/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/markets-app-80cf9/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3e4f54cf3f0e67c0eb22239bdef93187c048bf02"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-3343064326.us-central1.cloudfunctions.appspot.com/f62da2e4-8a18-40b9-8d8a-641c51f32733.zip?GoogleAccessId=service-750801349802@gcf-admin-robot.iam.gserviceaccount.com&Expires=1686535507&Signature=hX3yC1v7a7c5i3lgz1DOtwKOAfWv55TVAXonwcUGfbxxIwumIWlJPm4sPNTUUrjvtXR48ZX1SqiRwMf5SVftaI9XjLxGp8K0DELLMDua5S%2BDZXjsfXXJv%2FOxasmnKfXKxyHNWMspgVQe66MQ5MXoPZx7r13w%2FdGeJzbcLl4c6dyk8LG2LImsRWWZa1Yb8Um6MVv3HMFcAI1DDqsS%2FUaqumWBtU3JUdOpExPONZOspJNFJX2CV1W5BM6ab6TZ6uV7wSiOU3AH69gyy8Oro7%2FVTdyWDUXVtOXoJjGZtp0qjjtsRLNTj1C5CdZjg5gbTuAl1iJDXOEjsfkPjOkXvByaSw%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"markets-app-80cf9\",\"storageBucket\":\"markets-app-80cf9.appspot.com\"}","GCLOUD_PROJECT":"markets-app-80cf9","EVENTARC_CLOUD_EVENT_SOURCE":"projects/markets-app-80cf9/locations/us-central1/functions/app"},"runtime":"nodejs18","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2023-06-12T01:35:09Z"}}
+[debug] [2023-06-12T01:35:09.641Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn [none]
+[debug] [2023-06-12T01:35:09.872Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn 200
+[debug] [2023-06-12T01:35:09.873Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn {"name":"operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/markets-app-80cf9/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/markets-app-80cf9/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3e4f54cf3f0e67c0eb22239bdef93187c048bf02"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-3343064326.us-central1.cloudfunctions.appspot.com/f62da2e4-8a18-40b9-8d8a-641c51f32733.zip?GoogleAccessId=service-750801349802@gcf-admin-robot.iam.gserviceaccount.com&Expires=1686535507&Signature=hX3yC1v7a7c5i3lgz1DOtwKOAfWv55TVAXonwcUGfbxxIwumIWlJPm4sPNTUUrjvtXR48ZX1SqiRwMf5SVftaI9XjLxGp8K0DELLMDua5S%2BDZXjsfXXJv%2FOxasmnKfXKxyHNWMspgVQe66MQ5MXoPZx7r13w%2FdGeJzbcLl4c6dyk8LG2LImsRWWZa1Yb8Um6MVv3HMFcAI1DDqsS%2FUaqumWBtU3JUdOpExPONZOspJNFJX2CV1W5BM6ab6TZ6uV7wSiOU3AH69gyy8Oro7%2FVTdyWDUXVtOXoJjGZtp0qjjtsRLNTj1C5CdZjg5gbTuAl1iJDXOEjsfkPjOkXvByaSw%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"markets-app-80cf9\",\"storageBucket\":\"markets-app-80cf9.appspot.com\"}","GCLOUD_PROJECT":"markets-app-80cf9","EVENTARC_CLOUD_EVENT_SOURCE":"projects/markets-app-80cf9/locations/us-central1/functions/app"},"runtime":"nodejs18","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2023-06-12T01:35:09Z"}}
+[debug] [2023-06-12T01:35:10.387Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2023-06-12T01:35:10.387Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn [none]
+[debug] [2023-06-12T01:35:10.600Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn 200
+[debug] [2023-06-12T01:35:10.600Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn {"name":"operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/markets-app-80cf9/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/markets-app-80cf9/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3e4f54cf3f0e67c0eb22239bdef93187c048bf02"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-3343064326.us-central1.cloudfunctions.appspot.com/f62da2e4-8a18-40b9-8d8a-641c51f32733.zip?GoogleAccessId=service-750801349802@gcf-admin-robot.iam.gserviceaccount.com&Expires=1686535507&Signature=hX3yC1v7a7c5i3lgz1DOtwKOAfWv55TVAXonwcUGfbxxIwumIWlJPm4sPNTUUrjvtXR48ZX1SqiRwMf5SVftaI9XjLxGp8K0DELLMDua5S%2BDZXjsfXXJv%2FOxasmnKfXKxyHNWMspgVQe66MQ5MXoPZx7r13w%2FdGeJzbcLl4c6dyk8LG2LImsRWWZa1Yb8Um6MVv3HMFcAI1DDqsS%2FUaqumWBtU3JUdOpExPONZOspJNFJX2CV1W5BM6ab6TZ6uV7wSiOU3AH69gyy8Oro7%2FVTdyWDUXVtOXoJjGZtp0qjjtsRLNTj1C5CdZjg5gbTuAl1iJDXOEjsfkPjOkXvByaSw%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"markets-app-80cf9\",\"storageBucket\":\"markets-app-80cf9.appspot.com\"}","GCLOUD_PROJECT":"markets-app-80cf9","EVENTARC_CLOUD_EVENT_SOURCE":"projects/markets-app-80cf9/locations/us-central1/functions/app"},"runtime":"nodejs18","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2023-06-12T01:35:09Z"}}
+[debug] [2023-06-12T01:35:11.607Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2023-06-12T01:35:11.608Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn [none]
+[debug] [2023-06-12T01:35:11.774Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn 200
+[debug] [2023-06-12T01:35:11.774Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn {"name":"operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/markets-app-80cf9/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/markets-app-80cf9/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3e4f54cf3f0e67c0eb22239bdef93187c048bf02"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-3343064326.us-central1.cloudfunctions.appspot.com/f62da2e4-8a18-40b9-8d8a-641c51f32733.zip?GoogleAccessId=service-750801349802@gcf-admin-robot.iam.gserviceaccount.com&Expires=1686535507&Signature=hX3yC1v7a7c5i3lgz1DOtwKOAfWv55TVAXonwcUGfbxxIwumIWlJPm4sPNTUUrjvtXR48ZX1SqiRwMf5SVftaI9XjLxGp8K0DELLMDua5S%2BDZXjsfXXJv%2FOxasmnKfXKxyHNWMspgVQe66MQ5MXoPZx7r13w%2FdGeJzbcLl4c6dyk8LG2LImsRWWZa1Yb8Um6MVv3HMFcAI1DDqsS%2FUaqumWBtU3JUdOpExPONZOspJNFJX2CV1W5BM6ab6TZ6uV7wSiOU3AH69gyy8Oro7%2FVTdyWDUXVtOXoJjGZtp0qjjtsRLNTj1C5CdZjg5gbTuAl1iJDXOEjsfkPjOkXvByaSw%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"markets-app-80cf9\",\"storageBucket\":\"markets-app-80cf9.appspot.com\"}","GCLOUD_PROJECT":"markets-app-80cf9","EVENTARC_CLOUD_EVENT_SOURCE":"projects/markets-app-80cf9/locations/us-central1/functions/app"},"runtime":"nodejs18","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2023-06-12T01:35:09Z"}}
+[debug] [2023-06-12T01:35:13.795Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2023-06-12T01:35:13.797Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn [none]
+[debug] [2023-06-12T01:35:13.992Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn 200
+[debug] [2023-06-12T01:35:13.992Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn {"name":"operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/markets-app-80cf9/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/markets-app-80cf9/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3e4f54cf3f0e67c0eb22239bdef93187c048bf02"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-3343064326.us-central1.cloudfunctions.appspot.com/f62da2e4-8a18-40b9-8d8a-641c51f32733.zip?GoogleAccessId=service-750801349802@gcf-admin-robot.iam.gserviceaccount.com&Expires=1686535507&Signature=hX3yC1v7a7c5i3lgz1DOtwKOAfWv55TVAXonwcUGfbxxIwumIWlJPm4sPNTUUrjvtXR48ZX1SqiRwMf5SVftaI9XjLxGp8K0DELLMDua5S%2BDZXjsfXXJv%2FOxasmnKfXKxyHNWMspgVQe66MQ5MXoPZx7r13w%2FdGeJzbcLl4c6dyk8LG2LImsRWWZa1Yb8Um6MVv3HMFcAI1DDqsS%2FUaqumWBtU3JUdOpExPONZOspJNFJX2CV1W5BM6ab6TZ6uV7wSiOU3AH69gyy8Oro7%2FVTdyWDUXVtOXoJjGZtp0qjjtsRLNTj1C5CdZjg5gbTuAl1iJDXOEjsfkPjOkXvByaSw%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"markets-app-80cf9\",\"storageBucket\":\"markets-app-80cf9.appspot.com\"}","GCLOUD_PROJECT":"markets-app-80cf9","EVENTARC_CLOUD_EVENT_SOURCE":"projects/markets-app-80cf9/locations/us-central1/functions/app"},"runtime":"nodejs18","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2023-06-12T01:35:09Z"}}
+[debug] [2023-06-12T01:35:17.998Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2023-06-12T01:35:17.999Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn [none]
+[debug] [2023-06-12T01:35:18.232Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn 200
+[debug] [2023-06-12T01:35:18.233Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn {"name":"operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/markets-app-80cf9/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/markets-app-80cf9/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3e4f54cf3f0e67c0eb22239bdef93187c048bf02"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-3343064326.us-central1.cloudfunctions.appspot.com/f62da2e4-8a18-40b9-8d8a-641c51f32733.zip?GoogleAccessId=service-750801349802@gcf-admin-robot.iam.gserviceaccount.com&Expires=1686535507&Signature=hX3yC1v7a7c5i3lgz1DOtwKOAfWv55TVAXonwcUGfbxxIwumIWlJPm4sPNTUUrjvtXR48ZX1SqiRwMf5SVftaI9XjLxGp8K0DELLMDua5S%2BDZXjsfXXJv%2FOxasmnKfXKxyHNWMspgVQe66MQ5MXoPZx7r13w%2FdGeJzbcLl4c6dyk8LG2LImsRWWZa1Yb8Um6MVv3HMFcAI1DDqsS%2FUaqumWBtU3JUdOpExPONZOspJNFJX2CV1W5BM6ab6TZ6uV7wSiOU3AH69gyy8Oro7%2FVTdyWDUXVtOXoJjGZtp0qjjtsRLNTj1C5CdZjg5gbTuAl1iJDXOEjsfkPjOkXvByaSw%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"markets-app-80cf9\",\"storageBucket\":\"markets-app-80cf9.appspot.com\"}","GCLOUD_PROJECT":"markets-app-80cf9","EVENTARC_CLOUD_EVENT_SOURCE":"projects/markets-app-80cf9/locations/us-central1/functions/app"},"runtime":"nodejs18","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2023-06-12T01:35:09Z"}}
+[debug] [2023-06-12T01:35:26.241Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2023-06-12T01:35:26.242Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn [none]
+[debug] [2023-06-12T01:35:26.413Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn 200
+[debug] [2023-06-12T01:35:26.413Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn {"name":"operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/markets-app-80cf9/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/markets-app-80cf9/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3e4f54cf3f0e67c0eb22239bdef93187c048bf02"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-3343064326.us-central1.cloudfunctions.appspot.com/f62da2e4-8a18-40b9-8d8a-641c51f32733.zip?GoogleAccessId=service-750801349802@gcf-admin-robot.iam.gserviceaccount.com&Expires=1686535507&Signature=hX3yC1v7a7c5i3lgz1DOtwKOAfWv55TVAXonwcUGfbxxIwumIWlJPm4sPNTUUrjvtXR48ZX1SqiRwMf5SVftaI9XjLxGp8K0DELLMDua5S%2BDZXjsfXXJv%2FOxasmnKfXKxyHNWMspgVQe66MQ5MXoPZx7r13w%2FdGeJzbcLl4c6dyk8LG2LImsRWWZa1Yb8Um6MVv3HMFcAI1DDqsS%2FUaqumWBtU3JUdOpExPONZOspJNFJX2CV1W5BM6ab6TZ6uV7wSiOU3AH69gyy8Oro7%2FVTdyWDUXVtOXoJjGZtp0qjjtsRLNTj1C5CdZjg5gbTuAl1iJDXOEjsfkPjOkXvByaSw%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"markets-app-80cf9\",\"storageBucket\":\"markets-app-80cf9.appspot.com\"}","GCLOUD_PROJECT":"markets-app-80cf9","EVENTARC_CLOUD_EVENT_SOURCE":"projects/markets-app-80cf9/locations/us-central1/functions/app"},"runtime":"nodejs18","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2023-06-12T01:35:09Z","buildId":"a8f7e648-5b77-4c51-9b3a-0e01559eff6c","buildName":"projects/750801349802/locations/us-central1/builds/a8f7e648-5b77-4c51-9b3a-0e01559eff6c"}}
+[debug] [2023-06-12T01:35:36.424Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2023-06-12T01:35:36.425Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn [none]
+[debug] [2023-06-12T01:35:36.590Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn 200
+[debug] [2023-06-12T01:35:36.591Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn {"name":"operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/markets-app-80cf9/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/markets-app-80cf9/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3e4f54cf3f0e67c0eb22239bdef93187c048bf02"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-3343064326.us-central1.cloudfunctions.appspot.com/f62da2e4-8a18-40b9-8d8a-641c51f32733.zip?GoogleAccessId=service-750801349802@gcf-admin-robot.iam.gserviceaccount.com&Expires=1686535507&Signature=hX3yC1v7a7c5i3lgz1DOtwKOAfWv55TVAXonwcUGfbxxIwumIWlJPm4sPNTUUrjvtXR48ZX1SqiRwMf5SVftaI9XjLxGp8K0DELLMDua5S%2BDZXjsfXXJv%2FOxasmnKfXKxyHNWMspgVQe66MQ5MXoPZx7r13w%2FdGeJzbcLl4c6dyk8LG2LImsRWWZa1Yb8Um6MVv3HMFcAI1DDqsS%2FUaqumWBtU3JUdOpExPONZOspJNFJX2CV1W5BM6ab6TZ6uV7wSiOU3AH69gyy8Oro7%2FVTdyWDUXVtOXoJjGZtp0qjjtsRLNTj1C5CdZjg5gbTuAl1iJDXOEjsfkPjOkXvByaSw%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"markets-app-80cf9\",\"storageBucket\":\"markets-app-80cf9.appspot.com\"}","GCLOUD_PROJECT":"markets-app-80cf9","EVENTARC_CLOUD_EVENT_SOURCE":"projects/markets-app-80cf9/locations/us-central1/functions/app"},"runtime":"nodejs18","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2023-06-12T01:35:09Z","buildId":"a8f7e648-5b77-4c51-9b3a-0e01559eff6c","buildName":"projects/750801349802/locations/us-central1/builds/a8f7e648-5b77-4c51-9b3a-0e01559eff6c"}}
+[debug] [2023-06-12T01:35:46.607Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2023-06-12T01:35:46.609Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn [none]
+[debug] [2023-06-12T01:35:46.803Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn 200
+[debug] [2023-06-12T01:35:46.803Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn {"name":"operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/markets-app-80cf9/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/markets-app-80cf9/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3e4f54cf3f0e67c0eb22239bdef93187c048bf02"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-3343064326.us-central1.cloudfunctions.appspot.com/f62da2e4-8a18-40b9-8d8a-641c51f32733.zip?GoogleAccessId=service-750801349802@gcf-admin-robot.iam.gserviceaccount.com&Expires=1686535507&Signature=hX3yC1v7a7c5i3lgz1DOtwKOAfWv55TVAXonwcUGfbxxIwumIWlJPm4sPNTUUrjvtXR48ZX1SqiRwMf5SVftaI9XjLxGp8K0DELLMDua5S%2BDZXjsfXXJv%2FOxasmnKfXKxyHNWMspgVQe66MQ5MXoPZx7r13w%2FdGeJzbcLl4c6dyk8LG2LImsRWWZa1Yb8Um6MVv3HMFcAI1DDqsS%2FUaqumWBtU3JUdOpExPONZOspJNFJX2CV1W5BM6ab6TZ6uV7wSiOU3AH69gyy8Oro7%2FVTdyWDUXVtOXoJjGZtp0qjjtsRLNTj1C5CdZjg5gbTuAl1iJDXOEjsfkPjOkXvByaSw%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"markets-app-80cf9\",\"storageBucket\":\"markets-app-80cf9.appspot.com\"}","GCLOUD_PROJECT":"markets-app-80cf9","EVENTARC_CLOUD_EVENT_SOURCE":"projects/markets-app-80cf9/locations/us-central1/functions/app"},"runtime":"nodejs18","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2023-06-12T01:35:09Z","buildId":"a8f7e648-5b77-4c51-9b3a-0e01559eff6c","buildName":"projects/750801349802/locations/us-central1/builds/a8f7e648-5b77-4c51-9b3a-0e01559eff6c"}}
+[debug] [2023-06-12T01:35:56.817Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2023-06-12T01:35:56.818Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn [none]
+[debug] [2023-06-12T01:35:56.988Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn 200
+[debug] [2023-06-12T01:35:56.989Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn {"name":"operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/markets-app-80cf9/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/markets-app-80cf9/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3e4f54cf3f0e67c0eb22239bdef93187c048bf02"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-3343064326.us-central1.cloudfunctions.appspot.com/f62da2e4-8a18-40b9-8d8a-641c51f32733.zip?GoogleAccessId=service-750801349802@gcf-admin-robot.iam.gserviceaccount.com&Expires=1686535507&Signature=hX3yC1v7a7c5i3lgz1DOtwKOAfWv55TVAXonwcUGfbxxIwumIWlJPm4sPNTUUrjvtXR48ZX1SqiRwMf5SVftaI9XjLxGp8K0DELLMDua5S%2BDZXjsfXXJv%2FOxasmnKfXKxyHNWMspgVQe66MQ5MXoPZx7r13w%2FdGeJzbcLl4c6dyk8LG2LImsRWWZa1Yb8Um6MVv3HMFcAI1DDqsS%2FUaqumWBtU3JUdOpExPONZOspJNFJX2CV1W5BM6ab6TZ6uV7wSiOU3AH69gyy8Oro7%2FVTdyWDUXVtOXoJjGZtp0qjjtsRLNTj1C5CdZjg5gbTuAl1iJDXOEjsfkPjOkXvByaSw%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"markets-app-80cf9\",\"storageBucket\":\"markets-app-80cf9.appspot.com\"}","GCLOUD_PROJECT":"markets-app-80cf9","EVENTARC_CLOUD_EVENT_SOURCE":"projects/markets-app-80cf9/locations/us-central1/functions/app"},"runtime":"nodejs18","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2023-06-12T01:35:09Z","buildId":"a8f7e648-5b77-4c51-9b3a-0e01559eff6c","buildName":"projects/750801349802/locations/us-central1/builds/a8f7e648-5b77-4c51-9b3a-0e01559eff6c"}}
+[debug] [2023-06-12T01:36:07.002Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2023-06-12T01:36:07.002Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn [none]
+[debug] [2023-06-12T01:36:07.158Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn 200
+[debug] [2023-06-12T01:36:07.158Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn {"name":"operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/markets-app-80cf9/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/markets-app-80cf9/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3e4f54cf3f0e67c0eb22239bdef93187c048bf02"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-3343064326.us-central1.cloudfunctions.appspot.com/f62da2e4-8a18-40b9-8d8a-641c51f32733.zip?GoogleAccessId=service-750801349802@gcf-admin-robot.iam.gserviceaccount.com&Expires=1686535507&Signature=hX3yC1v7a7c5i3lgz1DOtwKOAfWv55TVAXonwcUGfbxxIwumIWlJPm4sPNTUUrjvtXR48ZX1SqiRwMf5SVftaI9XjLxGp8K0DELLMDua5S%2BDZXjsfXXJv%2FOxasmnKfXKxyHNWMspgVQe66MQ5MXoPZx7r13w%2FdGeJzbcLl4c6dyk8LG2LImsRWWZa1Yb8Um6MVv3HMFcAI1DDqsS%2FUaqumWBtU3JUdOpExPONZOspJNFJX2CV1W5BM6ab6TZ6uV7wSiOU3AH69gyy8Oro7%2FVTdyWDUXVtOXoJjGZtp0qjjtsRLNTj1C5CdZjg5gbTuAl1iJDXOEjsfkPjOkXvByaSw%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"markets-app-80cf9\",\"storageBucket\":\"markets-app-80cf9.appspot.com\"}","GCLOUD_PROJECT":"markets-app-80cf9","EVENTARC_CLOUD_EVENT_SOURCE":"projects/markets-app-80cf9/locations/us-central1/functions/app"},"runtime":"nodejs18","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2023-06-12T01:35:09Z","buildId":"a8f7e648-5b77-4c51-9b3a-0e01559eff6c","buildName":"projects/750801349802/locations/us-central1/builds/a8f7e648-5b77-4c51-9b3a-0e01559eff6c"}}
+[debug] [2023-06-12T01:36:17.175Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2023-06-12T01:36:17.176Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn [none]
+[debug] [2023-06-12T01:36:17.396Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn 200
+[debug] [2023-06-12T01:36:17.396Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn {"name":"operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/markets-app-80cf9/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/markets-app-80cf9/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3e4f54cf3f0e67c0eb22239bdef93187c048bf02"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-3343064326.us-central1.cloudfunctions.appspot.com/f62da2e4-8a18-40b9-8d8a-641c51f32733.zip?GoogleAccessId=service-750801349802@gcf-admin-robot.iam.gserviceaccount.com&Expires=1686535507&Signature=hX3yC1v7a7c5i3lgz1DOtwKOAfWv55TVAXonwcUGfbxxIwumIWlJPm4sPNTUUrjvtXR48ZX1SqiRwMf5SVftaI9XjLxGp8K0DELLMDua5S%2BDZXjsfXXJv%2FOxasmnKfXKxyHNWMspgVQe66MQ5MXoPZx7r13w%2FdGeJzbcLl4c6dyk8LG2LImsRWWZa1Yb8Um6MVv3HMFcAI1DDqsS%2FUaqumWBtU3JUdOpExPONZOspJNFJX2CV1W5BM6ab6TZ6uV7wSiOU3AH69gyy8Oro7%2FVTdyWDUXVtOXoJjGZtp0qjjtsRLNTj1C5CdZjg5gbTuAl1iJDXOEjsfkPjOkXvByaSw%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"markets-app-80cf9\",\"storageBucket\":\"markets-app-80cf9.appspot.com\"}","GCLOUD_PROJECT":"markets-app-80cf9","EVENTARC_CLOUD_EVENT_SOURCE":"projects/markets-app-80cf9/locations/us-central1/functions/app"},"runtime":"nodejs18","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2023-06-12T01:35:09Z","buildId":"a8f7e648-5b77-4c51-9b3a-0e01559eff6c","sourceToken":"88a177f6-68c8-4f22-8c08-a6f272ee01d4","buildName":"projects/750801349802/locations/us-central1/builds/a8f7e648-5b77-4c51-9b3a-0e01559eff6c"}}
+[debug] [2023-06-12T01:36:17.396Z] Got source token 88a177f6-68c8-4f22-8c08-a6f272ee01d4 for region us-central1
+[debug] [2023-06-12T01:36:27.400Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2023-06-12T01:36:27.402Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn [none]
+[debug] [2023-06-12T01:36:27.646Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn 200
+[debug] [2023-06-12T01:36:27.646Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn {"name":"operations/bWFya2V0cy1hcHAtODBjZjkvdXMtY2VudHJhbDEvYXBwL3VBYWt3Uk03R0Jn","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/markets-app-80cf9/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/markets-app-80cf9/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3e4f54cf3f0e67c0eb22239bdef93187c048bf02"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-3343064326.us-central1.cloudfunctions.appspot.com/f62da2e4-8a18-40b9-8d8a-641c51f32733.zip?GoogleAccessId=service-750801349802@gcf-admin-robot.iam.gserviceaccount.com&Expires=1686535507&Signature=hX3yC1v7a7c5i3lgz1DOtwKOAfWv55TVAXonwcUGfbxxIwumIWlJPm4sPNTUUrjvtXR48ZX1SqiRwMf5SVftaI9XjLxGp8K0DELLMDua5S%2BDZXjsfXXJv%2FOxasmnKfXKxyHNWMspgVQe66MQ5MXoPZx7r13w%2FdGeJzbcLl4c6dyk8LG2LImsRWWZa1Yb8Um6MVv3HMFcAI1DDqsS%2FUaqumWBtU3JUdOpExPONZOspJNFJX2CV1W5BM6ab6TZ6uV7wSiOU3AH69gyy8Oro7%2FVTdyWDUXVtOXoJjGZtp0qjjtsRLNTj1C5CdZjg5gbTuAl1iJDXOEjsfkPjOkXvByaSw%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"markets-app-80cf9\",\"storageBucket\":\"markets-app-80cf9.appspot.com\"}","GCLOUD_PROJECT":"markets-app-80cf9","EVENTARC_CLOUD_EVENT_SOURCE":"projects/markets-app-80cf9/locations/us-central1/functions/app"},"runtime":"nodejs18","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2023-06-12T01:36:26Z","buildId":"a8f7e648-5b77-4c51-9b3a-0e01559eff6c","sourceToken":"88a177f6-68c8-4f22-8c08-a6f272ee01d4","buildName":"projects/750801349802/locations/us-central1/builds/a8f7e648-5b77-4c51-9b3a-0e01559eff6c"},"done":true,"error":{"code":3,"message":"Function failed on loading user code. This is likely due to a bug in the user code. Error message: Provided module can't be loaded.\nDid you list all required modules in the package.json dependencies?\nDetailed stack trace: Error: Cannot find module 'axios'\nRequire stack:\n- /workspace/index.js\n- /layers/google.nodejs.functions-framework/functions-framework/node_modules/@google-cloud/functions-framework/build/src/loader.js\n- /layers/google.nodejs.functions-framework/functions-framework/node_modules/@google-cloud/functions-framework/build/src/main.js\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1075:15)\n    at Module._load (node:internal/modules/cjs/loader:920:27)\n    at Module.require (node:internal/modules/cjs/loader:1141:19)\n    at require (node:internal/modules/cjs/helpers:110:18)\n    at Object.<anonymous> (/workspace/index.js:8:15)\n    at Module._compile (node:internal/modules/cjs/loader:1254:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)\n    at Module.load (node:internal/modules/cjs/loader:1117:32)\n    at Module._load (node:internal/modules/cjs/loader:958:12)\n    at Module.require (node:internal/modules/cjs/loader:1141:19)\nCould not load the function, shutting down.. Please visit https://cloud.google.com/functions/docs/troubleshooting for in-depth troubleshooting documentation."}}
+[debug] [2023-06-12T01:36:27.647Z] Got source token 88a177f6-68c8-4f22-8c08-a6f272ee01d4 for region us-central1
+[error] Function failed on loading user code. This is likely due to a bug in the user code. Error message: Provided module can't be loaded.
+Did you list all required modules in the package.json dependencies?
+Detailed stack trace: Error: Cannot find module 'axios'
+Require stack:
+- /workspace/index.js
+- /layers/google.nodejs.functions-framework/functions-framework/node_modules/@google-cloud/functions-framework/build/src/loader.js
+- /layers/google.nodejs.functions-framework/functions-framework/node_modules/@google-cloud/functions-framework/build/src/main.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1075:15)
+    at Module._load (node:internal/modules/cjs/loader:920:27)
+    at Module.require (node:internal/modules/cjs/loader:1141:19)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at Object.<anonymous> (/workspace/index.js:8:15)
+    at Module._compile (node:internal/modules/cjs/loader:1254:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
+    at Module.load (node:internal/modules/cjs/loader:1117:32)
+    at Module._load (node:internal/modules/cjs/loader:958:12)
+    at Module.require (node:internal/modules/cjs/loader:1141:19)
+Could not load the function, shutting down.. Please visit https://cloud.google.com/functions/docs/troubleshooting for in-depth troubleshooting documentation.
+[debug] [2023-06-12T01:36:27.669Z] Total Function Deployment time: 78560
+[debug] [2023-06-12T01:36:27.669Z] 1 Functions Deployed
+[debug] [2023-06-12T01:36:27.669Z] 1 Functions Errored
+[debug] [2023-06-12T01:36:27.669Z] 0 Function Deployments Aborted
+[debug] [2023-06-12T01:36:27.669Z] Average Function Deployment time: 78558
+[info] 
+[info] Functions deploy had errors with the following functions:
+	app(us-central1)
+[debug] [2023-06-12T01:36:27.673Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2023-06-12T01:36:27.679Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/markets-app-80cf9/locations/us-central1/repositories/gcf-artifacts/packages/app [none]
+[debug] [2023-06-12T01:36:27.682Z] >>> [apiv2][query] GET https://us.gcr.io/v2/markets-app-80cf9/gcf/us-central1/tags/list [none]
+[debug] [2023-06-12T01:36:28.085Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/markets-app-80cf9/locations/us-central1/repositories/gcf-artifacts/packages/app 200
+[debug] [2023-06-12T01:36:28.085Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/markets-app-80cf9/locations/us-central1/repositories/gcf-artifacts/packages/app {"name":"projects/markets-app-80cf9/locations/us-central1/operations/3b44600a-938a-464b-bdd1-a89c3c7a823e","metadata":{"@type":"type.googleapis.com/google.devtools.artifactregistry.v1beta2.OperationMetadata"}}
+[debug] [2023-06-12T01:36:28.086Z] >>> [apiv2][query] GET https://artifactregistry.googleapis.com/v1beta2/projects/markets-app-80cf9/locations/us-central1/operations/3b44600a-938a-464b-bdd1-a89c3c7a823e [none]
+[debug] [2023-06-12T01:36:28.246Z] <<< [apiv2][status] GET https://artifactregistry.googleapis.com/v1beta2/projects/markets-app-80cf9/locations/us-central1/operations/3b44600a-938a-464b-bdd1-a89c3c7a823e 200
+[debug] [2023-06-12T01:36:28.246Z] <<< [apiv2][body] GET https://artifactregistry.googleapis.com/v1beta2/projects/markets-app-80cf9/locations/us-central1/operations/3b44600a-938a-464b-bdd1-a89c3c7a823e {"name":"projects/markets-app-80cf9/locations/us-central1/operations/3b44600a-938a-464b-bdd1-a89c3c7a823e","metadata":{"@type":"type.googleapis.com/google.devtools.artifactregistry.v1beta2.OperationMetadata"},"done":true,"response":{"@type":"type.googleapis.com/google.protobuf.Empty"}}
+[debug] [2023-06-12T01:36:28.743Z] <<< [apiv2][status] GET https://us.gcr.io/v2/markets-app-80cf9/gcf/us-central1/tags/list 200
+[debug] [2023-06-12T01:36:28.743Z] <<< [apiv2][body] GET https://us.gcr.io/v2/markets-app-80cf9/gcf/us-central1/tags/list {"child":[],"manifest":{},"name":"markets-app-80cf9/gcf/us-central1","tags":[]}
+[debug] [2023-06-12T01:36:28.743Z] Could not find image for function projects/markets-app-80cf9/locations/us-central1/functions/app
+[debug] [2023-06-12T01:36:28.743Z] Functions deploy failed.
+[debug] [2023-06-12T01:36:28.743Z] {
+  "endpoint": {
+    "id": "app",
+    "project": "markets-app-80cf9",
+    "region": "us-central1",
+    "entryPoint": "app",
+    "platform": "gcfv1",
+    "runtime": "nodejs18",
+    "httpsTrigger": {},
+    "serviceAccount": null,
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"markets-app-80cf9\",\"storageBucket\":\"markets-app-80cf9.appspot.com\"}",
+      "GCLOUD_PROJECT": "markets-app-80cf9",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/markets-app-80cf9/locations/us-central1/functions/app"
+    },
+    "codebase": "default",
+    "targetedByOnly": false,
+    "hash": "3e4f54cf3f0e67c0eb22239bdef93187c048bf02",
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    }
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "exit": 1,
+    "message": "Function failed on loading user code. This is likely due to a bug in the user code. Error message: Provided module can't be loaded.\nDid you list all required modules in the package.json dependencies?\nDetailed stack trace: Error: Cannot find module 'axios'\nRequire stack:\n- /workspace/index.js\n- /layers/google.nodejs.functions-framework/functions-framework/node_modules/@google-cloud/functions-framework/build/src/loader.js\n- /layers/google.nodejs.functions-framework/functions-framework/node_modules/@google-cloud/functions-framework/build/src/main.js\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1075:15)\n    at Module._load (node:internal/modules/cjs/loader:920:27)\n    at Module.require (node:internal/modules/cjs/loader:1141:19)\n    at require (node:internal/modules/cjs/helpers:110:18)\n    at Object.<anonymous> (/workspace/index.js:8:15)\n    at Module._compile (node:internal/modules/cjs/loader:1254:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)\n    at Module.load (node:internal/modules/cjs/loader:1117:32)\n    at Module._load (node:internal/modules/cjs/loader:958:12)\n    at Module.require (node:internal/modules/cjs/loader:1141:19)\nCould not load the function, shutting down.. Please visit https://cloud.google.com/functions/docs/troubleshooting for in-depth troubleshooting documentation.",
+    "status": 3,
+    "code": 3
+  }
+}
+[debug] [2023-06-12T01:36:28.745Z] Error: Failed to create function app in region us-central1
+    at C:\Users\Tomás\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:51:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Fabricator.createV1Function (C:\Users\Tomás\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:180:32)
+    at async Fabricator.createEndpoint (C:\Users\Tomás\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:132:13)
+    at async handle (C:\Users\Tomás\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:88:17)
+[error] 
+[error] Error: There was an error deploying functions
+[debug] [2023-06-12T01:39:57.882Z] ----------------------------------------------------------------------
+[debug] [2023-06-12T01:39:57.884Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Tomás\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-06-12T01:39:57.885Z] CLI Version:   12.3.1
+[debug] [2023-06-12T01:39:57.885Z] Platform:      win32
+[debug] [2023-06-12T01:39:57.886Z] Node Version:  v18.14.2
+[debug] [2023-06-12T01:39:57.887Z] Time:          Sun Jun 11 2023 18:39:57 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-06-12T01:39:57.887Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-12T01:39:57.991Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-12T01:39:57.992Z] > authorizing via signed-in user (tmaldonadotrs@gmail.com)
+[debug] [2023-06-12T01:39:57.992Z] [iam] checking project markets-app-80cf9 for permissions ["cloudconfig.configs.get","cloudconfig.configs.update","cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-06-12T01:39:57.996Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions [none]
+[debug] [2023-06-12T01:39:57.996Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:39:57.997Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions {"permissions":["cloudconfig.configs.get","cloudconfig.configs.update","cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-12T01:39:58.438Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions 200
+[debug] [2023-06-12T01:39:58.439Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions {"permissions":["cloudconfig.configs.get","cloudconfig.configs.update","cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-12T01:39:58.441Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/markets-app-80cf9/serviceAccounts/markets-app-80cf9@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-06-12T01:39:58.441Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/markets-app-80cf9/serviceAccounts/markets-app-80cf9@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-06-12T01:39:58.786Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/markets-app-80cf9/serviceAccounts/markets-app-80cf9@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-06-12T01:39:58.786Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/markets-app-80cf9/serviceAccounts/markets-app-80cf9@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-06-12T01:39:58.789Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 [none]
+[debug] [2023-06-12T01:39:59.099Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 200
+[debug] [2023-06-12T01:39:59.100Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 {"projectId":"markets-app-80cf9","projectNumber":"750801349802","displayName":"Markets App","name":"projects/markets-app-80cf9","resources":{"hostingSite":"markets-app-80cf9"},"state":"ACTIVE","etag":"1_b98090e6-6f20-4800-9b3b-68866915d61e"}
+[info] 
+[info] === Deploying to 'markets-app-80cf9'...
+[info] 
+[info] i  deploying functions, hosting, remoteconfig 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] +  functions: Finished running predeploy script. 
+[debug] [2023-06-12T01:40:06.452Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 [none]
+[debug] [2023-06-12T01:40:06.718Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 200
+[debug] [2023-06-12T01:40:06.718Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 {"projectId":"markets-app-80cf9","projectNumber":"750801349802","displayName":"Markets App","name":"projects/markets-app-80cf9","resources":{"hostingSite":"markets-app-80cf9"},"state":"ACTIVE","etag":"1_b98090e6-6f20-4800-9b3b-68866915d61e"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-06-12T01:40:06.730Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-06-12T01:40:06.730Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:40:06.733Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-06-12T01:40:06.733Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:40:06.736Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudbuild.googleapis.com [none]
+[debug] [2023-06-12T01:40:06.736Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudbuild.googleapis.com x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:40:06.739Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/artifactregistry.googleapis.com [none]
+[debug] [2023-06-12T01:40:06.739Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/artifactregistry.googleapis.com x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:40:07.257Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/artifactregistry.googleapis.com 200
+[debug] [2023-06-12T01:40:07.257Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-06-12T01:40:07.264Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudfunctions.googleapis.com 200
+[debug] [2023-06-12T01:40:07.265Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-06-12T01:40:07.267Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/runtimeconfig.googleapis.com 200
+[debug] [2023-06-12T01:40:07.267Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-06-12T01:40:07.283Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudbuild.googleapis.com 200
+[debug] [2023-06-12T01:40:07.283Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-06-12T01:40:07.284Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9/adminSdkConfig [none]
+[debug] [2023-06-12T01:40:07.501Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9/adminSdkConfig 200
+[debug] [2023-06-12T01:40:07.501Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9/adminSdkConfig {"projectId":"markets-app-80cf9","storageBucket":"markets-app-80cf9.appspot.com"}
+[debug] [2023-06-12T01:40:07.502Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/markets-app-80cf9/configs [none]
+[debug] [2023-06-12T01:40:07.722Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/markets-app-80cf9/configs 200
+[debug] [2023-06-12T01:40:07.722Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/markets-app-80cf9/configs {}
+[debug] [2023-06-12T01:40:07.724Z] Validating nodejs source
+[debug] [2023-06-12T01:40:11.821Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "express": "^4.18.2",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-06-12T01:40:11.822Z] Building nodejs source
+[debug] [2023-06-12T01:40:11.824Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-06-12T01:40:11.857Z] Found firebase-functions binary at 'C:\Users\Tomás\Desktop\repository-windows\markets-app\markets-app\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-06-12T01:40:12.634Z] Serving at port 8997
+
+[debug] [2023-06-12T01:40:13.769Z] FetchError: request to http://localhost:8997/__/quitquitquit failed, reason: connect ECONNREFUSED ::1:8997
+    at ClientRequest.<anonymous> (C:\Users\Tomás\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:513:28)
+    at ClientRequest.emit (node:domain:489:12)
+    at Socket.socketErrorListener (node:_http_client:502:9)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-06-12T01:43:51.475Z] ----------------------------------------------------------------------
+[debug] [2023-06-12T01:43:51.478Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Tomás\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-06-12T01:43:51.480Z] CLI Version:   12.3.1
+[debug] [2023-06-12T01:43:51.480Z] Platform:      win32
+[debug] [2023-06-12T01:43:51.481Z] Node Version:  v18.14.2
+[debug] [2023-06-12T01:43:51.482Z] Time:          Sun Jun 11 2023 18:43:51 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-06-12T01:43:51.482Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-12T01:43:51.583Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-12T01:43:51.584Z] > authorizing via signed-in user (tmaldonadotrs@gmail.com)
+[debug] [2023-06-12T01:43:51.585Z] [iam] checking project markets-app-80cf9 for permissions ["cloudconfig.configs.get","cloudconfig.configs.update","cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-06-12T01:43:51.588Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions [none]
+[debug] [2023-06-12T01:43:51.588Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:43:51.588Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions {"permissions":["cloudconfig.configs.get","cloudconfig.configs.update","cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-12T01:43:51.943Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions 200
+[debug] [2023-06-12T01:43:51.945Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/markets-app-80cf9:testIamPermissions {"permissions":["cloudconfig.configs.get","cloudconfig.configs.update","cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-12T01:43:51.946Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/markets-app-80cf9/serviceAccounts/markets-app-80cf9@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-06-12T01:43:51.947Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/markets-app-80cf9/serviceAccounts/markets-app-80cf9@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-06-12T01:43:52.229Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/markets-app-80cf9/serviceAccounts/markets-app-80cf9@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-06-12T01:43:52.230Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/markets-app-80cf9/serviceAccounts/markets-app-80cf9@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-06-12T01:43:52.235Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 [none]
+[debug] [2023-06-12T01:43:52.598Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 200
+[debug] [2023-06-12T01:43:52.598Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 {"projectId":"markets-app-80cf9","projectNumber":"750801349802","displayName":"Markets App","name":"projects/markets-app-80cf9","resources":{"hostingSite":"markets-app-80cf9"},"state":"ACTIVE","etag":"1_ca9135b8-5c6a-430d-988c-54f280ac0d54"}
+[info] 
+[info] === Deploying to 'markets-app-80cf9'...
+[info] 
+[info] i  deploying functions, hosting, remoteconfig 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] +  functions: Finished running predeploy script. 
+[debug] [2023-06-12T01:43:58.729Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 [none]
+[debug] [2023-06-12T01:43:58.963Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 200
+[debug] [2023-06-12T01:43:58.963Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9 {"projectId":"markets-app-80cf9","projectNumber":"750801349802","displayName":"Markets App","name":"projects/markets-app-80cf9","resources":{"hostingSite":"markets-app-80cf9"},"state":"ACTIVE","etag":"1_ca9135b8-5c6a-430d-988c-54f280ac0d54"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-06-12T01:43:58.972Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-06-12T01:43:58.973Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:43:58.976Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-06-12T01:43:58.976Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:43:58.979Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudbuild.googleapis.com [none]
+[debug] [2023-06-12T01:43:58.980Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudbuild.googleapis.com x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:43:58.982Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/artifactregistry.googleapis.com [none]
+[debug] [2023-06-12T01:43:58.983Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/artifactregistry.googleapis.com x-goog-quota-user=projects/markets-app-80cf9
+[debug] [2023-06-12T01:43:59.486Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/runtimeconfig.googleapis.com 200
+[debug] [2023-06-12T01:43:59.487Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-06-12T01:43:59.492Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/artifactregistry.googleapis.com 200
+[debug] [2023-06-12T01:43:59.492Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-06-12T01:43:59.498Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudbuild.googleapis.com 200
+[debug] [2023-06-12T01:43:59.499Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-06-12T01:43:59.504Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudfunctions.googleapis.com 200
+[debug] [2023-06-12T01:43:59.504Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/markets-app-80cf9/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-06-12T01:43:59.506Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9/adminSdkConfig [none]
+[debug] [2023-06-12T01:43:59.731Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9/adminSdkConfig 200
+[debug] [2023-06-12T01:43:59.731Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/markets-app-80cf9/adminSdkConfig {"projectId":"markets-app-80cf9","storageBucket":"markets-app-80cf9.appspot.com"}
+[debug] [2023-06-12T01:43:59.733Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/markets-app-80cf9/configs [none]
+[debug] [2023-06-12T01:43:59.968Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/markets-app-80cf9/configs 200
+[debug] [2023-06-12T01:43:59.968Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/markets-app-80cf9/configs {}
+[debug] [2023-06-12T01:43:59.977Z] Validating nodejs source
+[debug] [2023-06-12T01:44:03.093Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "express": "^4.18.2",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-06-12T01:44:03.093Z] Building nodejs source
+[debug] [2023-06-12T01:44:03.094Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-06-12T01:44:03.114Z] Found firebase-functions binary at 'C:\Users\Tomás\Desktop\repository-windows\markets-app\markets-app\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-06-12T01:44:03.551Z] Serving at port 8825
+
+[debug] [2023-06-12T01:44:04.059Z] FetchError: request to http://localhost:8825/__/quitquitquit failed, reason: connect ECONNREFUSED ::1:8825
+    at ClientRequest.<anonymous> (C:\Users\Tomás\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:513:28)
+    at ClientRequest.emit (node:domain:489:12)
+    at Socket.socketErrorListener (node:_http_client:502:9)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[error] 
+[error] Error: An unexpected error has occurred.
